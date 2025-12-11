@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 def recipe_ideas(ingredients: list, num_recipes: int = 3) -> str:
     if not ingredients:
